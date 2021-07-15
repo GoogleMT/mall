@@ -18,6 +18,12 @@
         <module>mall-member</module>
         <module>mall-order</module>
         <module>mall-ware</module>
+        <!-- renren-fast -->
+        <module>renren-fast</module>
+        <!-- renren-generator -->
+        <module>renren-generator</module>
+
+        <module>mall-common</module>
     </modules>
 
 </project>
