@@ -24,6 +24,8 @@
         <module>renren-generator</module>
 
         <module>mall-common</module>
+        <!-- mall-gateway -->
+        <module>mall-gateway</module>
     </modules>
 
 </project>
