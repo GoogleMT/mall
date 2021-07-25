@@ -4,6 +4,12 @@ spring:
     url: jdbc:mysql://192.168.56.10:3306/mall_pms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: root
+  application:
+    name: mall-product
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 # MapperScan
 # sql映射文件位置
 mybatis-plus:
@@ -11,3 +17,6 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
+server:
+  port: 10000
+
