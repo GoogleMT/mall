@@ -10,6 +10,8 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+  gson:
+    date-format: yyyy-MM-dd HH:mm:ss
 # MapperScan
 # sql映射文件位置
 mybatis-plus:
@@ -17,6 +19,11 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
+      logic-delete-value: 1 # 逻辑已删除值（默认为1)
+      logic-not-delete-value: 0 # 逻辑未删除的(默认为0）
 server:
   port: 10000
 
+logging:
+  level:
+    top.gumt.mall.*: debug

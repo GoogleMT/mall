@@ -62,6 +62,15 @@
             <version>2.0.1.RELEASE</version>
         </dependency>
 
+        <!--jsr3参数校验器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+            <version>2.5.3</version>
+        </dependency>
+        <!--  这个里面依赖了hibernate-validator -->
+
+
         <!-- SpringCloud Alibaba  -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

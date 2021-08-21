@@ -2,7 +2,9 @@ package top.gumt.mall.product.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import top.gumt.common.utils.PageUtils;
+import top.gumt.mall.product.entity.SpuInfoDescEntity;
 import top.gumt.mall.product.entity.SpuInfoEntity;
+import top.gumt.mall.product.vo.SpuSaveVo;
 
 import java.util.Map;
 
@@ -16,5 +18,11 @@ import java.util.Map;
 public interface SpuInfoService extends IService<SpuInfoEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    void saveSpuInfo(SpuSaveVo spuSaveVo);
+
+    void saveBaseSpuInfo(SpuInfoEntity spuInfoEntity);
+
+    PageUtils queryPageByCondition(Map<String, Object> params);
 }
 

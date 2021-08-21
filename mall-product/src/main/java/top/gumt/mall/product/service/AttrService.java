@@ -3,7 +3,11 @@ package top.gumt.mall.product.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import top.gumt.common.utils.PageUtils;
 import top.gumt.mall.product.entity.AttrEntity;
+import top.gumt.mall.product.vo.AttrGroupRelationVo;
+import top.gumt.mall.product.vo.AttrResponseVo;
+import top.gumt.mall.product.vo.AttrVo;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,5 +20,19 @@ import java.util.Map;
 public interface AttrService extends IService<AttrEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    void saveAttr(AttrVo attrVo);
+
+    PageUtils queryBaseAttrPage(Map<String, Object> params, Long catelogId, String type);
+
+    AttrResponseVo getAttrInfo(Long attrId);
+
+    void updateAttr(AttrVo attrVo);
+
+    List<AttrEntity> getRelationAttr(Long attrgroupId);
+
+    void deleteRelation(AttrGroupRelationVo[] attrGroupRelationVos);
+
+    PageUtils getNoRelation(Map<String, Object> params, Long attrgroupId);
 }
 

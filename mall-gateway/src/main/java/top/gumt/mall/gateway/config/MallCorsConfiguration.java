@@ -30,5 +30,5 @@ public class MallCorsConfiguration {
         // 任意url都要进行跨域配置
         source.registerCorsConfiguration("/**",corsConfiguration);
         return new CorsWebFilter(source);
-}
+    }
 }

@@ -18,6 +18,7 @@
         <module>mall-member</module>
         <module>mall-order</module>
         <module>mall-ware</module>
+        <module>mall-third-party</module>
         <!-- renren-fast -->
         <module>renren-fast</module>
         <!-- renren-generator -->

@@ -14,7 +14,7 @@ import top.gumt.mall.product.entity.SpuInfoEntity;
 import top.gumt.mall.product.service.SpuInfoService;
 import top.gumt.common.utils.PageUtils;
 import top.gumt.common.utils.R;
-
+import top.gumt.mall.product.vo.SpuSaveVo;
 
 
 /**
@@ -36,7 +36,7 @@ public class SpuInfoController {
     @RequestMapping("/list")
     //@RequiresPermissions("product:spuinfo:list")
     public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = spuInfoService.queryPage(params);
+        PageUtils page = spuInfoService.queryPageByCondition(params);
 
         return R.ok().put("page", page);
     }
@@ -58,9 +58,9 @@ public class SpuInfoController {
      */
     @RequestMapping("/save")
     //@RequiresPermissions("product:spuinfo:save")
-    public R save(@RequestBody SpuInfoEntity spuInfo){
-		spuInfoService.save(spuInfo);
-
+    public R save(@RequestBody SpuSaveVo spuSaveVo){
+//		spuInfoService.save(spuInfo);
+        spuInfoService.saveSpuInfo(spuSaveVo);
         return R.ok();
     }
 

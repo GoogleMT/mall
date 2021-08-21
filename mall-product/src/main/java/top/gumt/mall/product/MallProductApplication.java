@@ -4,6 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * 1.整合Mybatis-plus
@@ -20,7 +21,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  *              2.SQL映射文件
  */
 
-@MapperScan("top.gumt.mall.product.dao")
+@EnableFeignClients("top.gumt.mall.product.feign")
 @SpringBootApplication
 @EnableDiscoveryClient
 public class MallProductApplication {

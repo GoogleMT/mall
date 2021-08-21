@@ -1,20 +1,19 @@
 package top.gumt.mall.ware.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 import top.gumt.mall.ware.entity.PurchaseEntity;
 import top.gumt.mall.ware.service.PurchaseService;
 import top.gumt.common.utils.PageUtils;
 import top.gumt.common.utils.R;
-
+import top.gumt.mall.ware.vo.MergeVo;
+import top.gumt.mall.ware.vo.PurchaseFinishVo;
 
 
 /**
@@ -29,6 +28,39 @@ import top.gumt.common.utils.R;
 public class PurchaseController {
     @Autowired
     private PurchaseService purchaseService;
+
+    @PostMapping("/done")
+    public R finish(@RequestBody @Validated PurchaseFinishVo purchaseFinishVo) {
+        purchaseService.done(purchaseFinishVo);
+
+        return R.ok();
+    }
+
+    @PostMapping("/received")
+    public R received(@RequestBody List<Long>ids) {
+        purchaseService.received(ids);
+
+        return R.ok();
+    }
+
+    @PostMapping("/merge")
+    public R merge(@RequestBody MergeVo mergeVo) {
+        purchaseService.mergePurchase(mergeVo);
+        return R.ok();
+    }
+
+    /**
+     * 获取未领取的采购单
+     * @param params
+     * @return
+     */
+    @RequestMapping("/unreceive/list")
+    //@RequiresPermissions("ware:purchase:list")
+    public R unreceivelist(@RequestParam Map<String, Object> params){
+        PageUtils page = purchaseService.queryPageUnreceive(params);
+
+        return R.ok().put("page", page);
+    }
 
     /**
      * 列表
