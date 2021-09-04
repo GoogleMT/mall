@@ -27,6 +27,8 @@
         <module>mall-common</module>
         <!-- mall-gateway -->
         <module>mall-gateway</module>
+
+        <module>mall-search</module>
     </modules>
 
 </project>
