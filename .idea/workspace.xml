@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="114b936e-e75d-4450-9468-6c1ff5208252" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/META-INF/mall-common.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/config/ValidatorConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/constant/ProductConstant$AttrEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/constant/ProductConstant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/constant/WareConstant$PurchaseDetailStatusEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/constant/WareConstant$PurchaseStatusEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/constant/WareConstant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/exception/BizCodeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/exception/RRException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/to/MemberPrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/to/SkuReductionTo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/to/SpuBoundTo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/utils/Constant$CloudService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/utils/Constant$MenuType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/utils/Constant$ScheduleStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/utils/Constant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/utils/PageUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/utils/Query.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/utils/R.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/utils/ValidatorUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/valid/AddGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/valid/ListValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/valid/ListValueConstraintValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/valid/UpdateGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/valid/UpdateStatusGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/xss/HTMLFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/classes/top/gumt/common/xss/SQLFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/mall-common-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/MallCouponApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/CouponController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/CouponHistoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/CouponSpuCategoryRelationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/CouponSpuRelationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/HomeAdvController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/HomeSubjectController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/HomeSubjectSpuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/MemberPriceController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SeckillPromotionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SeckillSessionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SeckillSkuNoticeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SeckillSkuRelationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SkuFullReductionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SkuLadderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsCouponController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsCouponHistoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsCouponSpuCategoryRelationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsCouponSpuRelationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsHomeAdvController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsHomeSubjectController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsHomeSubjectSpuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsMemberPriceController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsSeckillPromotionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsSeckillSessionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsSeckillSkuNoticeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsSeckillSkuRelationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsSkuFullReductionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsSkuLadderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SmsSpuBoundsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/SpuBoundsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/controller/UndoLogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/CouponDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/CouponHistoryDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/CouponSpuCategoryRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/CouponSpuRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/HomeAdvDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/HomeSubjectDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/HomeSubjectSpuDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/MemberPriceDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SeckillPromotionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SeckillSessionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SeckillSkuNoticeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SeckillSkuRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SkuFullReductionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SkuLadderDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsCouponDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsCouponHistoryDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsCouponSpuCategoryRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsCouponSpuRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsHomeAdvDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsHomeSubjectDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsHomeSubjectSpuDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsMemberPriceDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsSeckillPromotionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsSeckillSessionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsSeckillSkuNoticeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsSeckillSkuRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsSkuFullReductionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsSkuLadderDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SmsSpuBoundsDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/SpuBoundsDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/dao/UndoLogDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/CouponEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/CouponHistoryEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/CouponSpuCategoryRelationEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/CouponSpuRelationEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/HomeAdvEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/HomeSubjectEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/HomeSubjectSpuEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/MemberPriceEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SeckillPromotionEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SeckillSessionEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SeckillSkuNoticeEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SeckillSkuRelationEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SkuFullReductionEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SkuLadderEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsCouponEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsCouponHistoryEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsCouponSpuCategoryRelationEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsCouponSpuRelationEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsHomeAdvEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsHomeSubjectEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsHomeSubjectSpuEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsMemberPriceEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsSeckillPromotionEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsSeckillSessionEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsSeckillSkuNoticeEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsSeckillSkuRelationEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsSkuFullReductionEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsSkuLadderEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SmsSpuBoundsEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/SpuBoundsEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/entity/UndoLogEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/CouponHistoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/CouponService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/CouponSpuCategoryRelationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/CouponSpuRelationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/HomeAdvService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/HomeSubjectService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/HomeSubjectSpuService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/MemberPriceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SeckillPromotionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SeckillSessionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SeckillSkuNoticeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SeckillSkuRelationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SkuFullReductionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SkuLadderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsCouponHistoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsCouponService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsCouponSpuCategoryRelationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsCouponSpuRelationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsHomeAdvService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsHomeSubjectService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsHomeSubjectSpuService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsMemberPriceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsSeckillPromotionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsSeckillSessionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsSeckillSkuNoticeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsSeckillSkuRelationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsSkuFullReductionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsSkuLadderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SmsSpuBoundsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/SpuBoundsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/UndoLogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/CouponHistoryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/CouponServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/CouponSpuCategoryRelationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/CouponSpuRelationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/HomeAdvServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/HomeSubjectServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/HomeSubjectSpuServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/MemberPriceServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SeckillPromotionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SeckillSessionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SeckillSkuNoticeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SeckillSkuRelationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SkuFullReductionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SkuLadderServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsCouponHistoryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsCouponServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsCouponSpuCategoryRelationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsCouponSpuRelationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsHomeAdvServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsHomeSubjectServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsHomeSubjectSpuServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsMemberPriceServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsSeckillPromotionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsSeckillSessionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsSeckillSkuNoticeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsSeckillSkuRelationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsSkuFullReductionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsSkuLadderServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SmsSpuBoundsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/SpuBoundsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/classes/top/gumt/mall/coupon/service/impl/UndoLogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-coupon/target/test-classes/top/gumt/mall/coupon/MallCouponApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-gateway/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/target/classes/top/gumt/mall/gateway/MallGatewayApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/target/classes/top/gumt/mall/gateway/config/MallCorsConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-gateway/target/test-classes/top/gumt/mall/gateway/MallGatewayApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/MallMemberApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/controller/GrowthChangeHistoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/controller/IntegrationChangeHistoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/controller/MemberCollectSpuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/controller/MemberCollectSubjectController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/controller/MemberController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/controller/MemberLevelController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/controller/MemberLoginLogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/controller/MemberReceiveAddressController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/controller/MemberStatisticsInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/controller/UndoLogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/dao/GrowthChangeHistoryDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/dao/IntegrationChangeHistoryDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/dao/MemberCollectSpuDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/dao/MemberCollectSubjectDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/dao/MemberDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/dao/MemberLevelDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/dao/MemberLoginLogDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/dao/MemberReceiveAddressDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/dao/MemberStatisticsInfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/dao/UndoLogDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/entity/GrowthChangeHistoryEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/entity/IntegrationChangeHistoryEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/entity/MemberCollectSpuEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/entity/MemberCollectSubjectEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/entity/MemberEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/entity/MemberLevelEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/entity/MemberLoginLogEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/entity/MemberReceiveAddressEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/entity/MemberStatisticsInfoEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/entity/UndoLogEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/feign/CouponFeignService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/GrowthChangeHistoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/IntegrationChangeHistoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/MemberCollectSpuService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/MemberCollectSubjectService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/MemberLevelService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/MemberLoginLogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/MemberReceiveAddressService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/MemberService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/MemberStatisticsInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/UndoLogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/impl/GrowthChangeHistoryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/impl/IntegrationChangeHistoryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/impl/MemberCollectSpuServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/impl/MemberCollectSubjectServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/impl/MemberLevelServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/impl/MemberLoginLogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/impl/MemberReceiveAddressServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/impl/MemberServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/impl/MemberStatisticsInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/classes/top/gumt/mall/member/service/impl/UndoLogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-member/target/test-classes/top/gumt/mall/member/MallMemberApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/META-INF/mall-product.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/MallProductApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/confg/MybatisPlusConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/AttrAttrgroupRelationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/AttrController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/AttrGroupController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/BrandController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/CategoryBrandRelationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/CategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/CommentReplayController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/ProductAttrValueController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/SkuImagesController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/SkuInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/SkuSaleAttrValueController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/SpuCommentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/SpuImagesController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/SpuInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/SpuInfoDescController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/controller/UndoLogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/AttrAttrgroupRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/AttrDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/AttrGroupDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/BrandDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/CategoryBrandRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/CategoryDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/CommentReplayDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/ProductAttrValueDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/SkuImagesDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/SkuInfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/SkuSaleAttrValueDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/SpuCommentDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/SpuImagesDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/SpuInfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/SpuInfoDescDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/dao/UndoLogDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/AttrAttrgroupRelationEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/AttrEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/AttrGroupEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/BrandEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/CategoryBrandRelationEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/CategoryEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/CommentReplayEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/ProductAttrValueEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/SkuImagesEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/SkuInfoEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/SkuSaleAttrValueEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/SpuCommentEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/SpuImagesEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/SpuInfoDescEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/SpuInfoEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/entity/UndoLogEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/exception/MallExceptionControllerAdvice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/feign/CouponFeignService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/AttrAttrgroupRelationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/AttrGroupService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/AttrService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/BrandService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/CategoryBrandRelationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/CategoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/CommentReplayService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/ProductAttrValueService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/SkuImagesService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/SkuInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/SkuSaleAttrValueService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/SpuCommentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/SpuImagesService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/SpuInfoDescService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/SpuInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/UndoLogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/AttrAttrgroupRelationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/AttrGroupServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/AttrServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/BrandServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/CategoryBrandRelationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/CategoryServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/CommentReplayServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/ProductAttrValueServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/SkuImagesServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/SkuInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/SkuSaleAttrValueServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/SpuCommentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/SpuImagesServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/SpuInfoDescServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/SpuInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/service/impl/UndoLogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/vo/Attr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/vo/AttrGroupRelationVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/vo/AttrGroupWithAttrsVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/vo/AttrResponseVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/vo/AttrVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/vo/BaseAttrs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/vo/Bounds.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/vo/BrandVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/vo/Images.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/vo/MemberPrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/vo/Skus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/classes/top/gumt/mall/product/vo/SpuSaveVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/mall-product-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/mall-product-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/surefire-reports/TEST-top.gumt.mall.product.MallProductApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/surefire-reports/top.gumt.mall.product.MallProductApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-product/target/test-classes/top/gumt/mall/product/MallProductApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-search/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mall-search/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-search/src/main/java/top/gumt/mall/search/MallSearchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-search/src/main/java/top/gumt/mall/search/MallSearchApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-search/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mall-search/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-search/src/test/java/top/gumt/mall/search/MallSearchApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mall-search/src/test/java/top/gumt/mall/search/MallSearchApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-third-party/target/classes/top/gumt/mall/thirdparty/MallThirdPartyApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-third-party/target/classes/top/gumt/mall/thirdparty/controller/OssController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-third-party/target/test-classes/top/gumt/mall/thirdparty/MallThirdPartyApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/MallWareApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/controller/PurchaseController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/controller/PurchaseDetailController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/controller/UndoLogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/controller/WareInfoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/controller/WareOrderTaskController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/controller/WareOrderTaskDetailController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/controller/WareSkuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/dao/PurchaseDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/dao/PurchaseDetailDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/dao/UndoLogDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/dao/WareInfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/dao/WareOrderTaskDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/dao/WareOrderTaskDetailDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/dao/WareSkuDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/entity/PurchaseDetailEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/entity/PurchaseEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/entity/UndoLogEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/entity/WareInfoEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/entity/WareOrderTaskDetailEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/entity/WareOrderTaskEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/entity/WareSkuEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/feign/ProductFeignService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/service/PurchaseDetailService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/service/PurchaseService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/service/UndoLogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/service/WareInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/service/WareOrderTaskDetailService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/service/WareOrderTaskService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/service/WareSkuService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/service/impl/PurchaseDetailServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/service/impl/PurchaseServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/service/impl/UndoLogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/service/impl/WareInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/service/impl/WareOrderTaskDetailServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/service/impl/WareOrderTaskServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/service/impl/WareSkuServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/vo/MergeVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/vo/PurchaseFinishItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/classes/top/gumt/mall/ware/vo/PurchaseFinishVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall-ware/target/test-classes/top/gumt/mall/ware/MallWareApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/RenrenApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/annotation/SysLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/aspect/RedisAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/aspect/SysLogAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/exception/RRException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/exception/RRExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/ConfigConstant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/Constant$CloudService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/Constant$MenuType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/Constant$ScheduleStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/Constant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/DateUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/HttpContextUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/IPUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/MapUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/PageUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/Query.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/R.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/RedisKeys.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/RedisUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/ShiroUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/utils/SpringContextUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/validator/Assert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/validator/ValidatorUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/validator/group/AddGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/validator/group/AliyunGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/validator/group/Group.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/validator/group/QcloudGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/validator/group/QiniuGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/validator/group/UpdateGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/xss/HTMLFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/xss/SQLFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/xss/XssFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/xss/XssHttpServletRequestWrapper$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/common/xss/XssHttpServletRequestWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/config/CorsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/config/FilterConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/config/KaptchaConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/config/MybatisPlusConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/config/RedisConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/config/ShiroConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/config/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/datasource/annotation/DataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/datasource/aspect/DataSourceAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/datasource/config/DynamicContextHolder$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/datasource/config/DynamicContextHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/datasource/config/DynamicDataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/datasource/config/DynamicDataSourceConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/datasource/config/DynamicDataSourceFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/datasource/properties/DataSourceProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/datasource/properties/DynamicDataSourceProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/annotation/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/annotation/LoginUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/config/WebMvcConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/controller/AppLoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/controller/AppRegisterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/controller/AppTestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/dao/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/entity/UserEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/form/LoginForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/form/RegisterForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/interceptor/AuthorizationInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/resolver/LoginUserHandlerMethodArgumentResolver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/app/utils/JwtUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/config/ScheduleConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/controller/ScheduleJobController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/controller/ScheduleJobLogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/dao/ScheduleJobDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/dao/ScheduleJobLogDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/entity/ScheduleJobEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/entity/ScheduleJobLogEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/service/ScheduleJobLogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/service/ScheduleJobService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/service/impl/ScheduleJobLogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/service/impl/ScheduleJobServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/task/ITask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/task/TestTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/utils/ScheduleJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/job/utils/ScheduleUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/oss/cloud/AliyunCloudStorageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/oss/cloud/CloudStorageConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/oss/cloud/CloudStorageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/oss/cloud/OSSFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/oss/cloud/QcloudCloudStorageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/oss/cloud/QiniuCloudStorageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/oss/controller/SysOssController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/oss/dao/SysOssDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/oss/entity/SysOssEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/oss/service/SysOssService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/oss/service/impl/SysOssServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/controller/AbstractController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/controller/SysConfigController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/controller/SysLogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/controller/SysLoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/controller/SysMenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/controller/SysRoleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/controller/SysUserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/dao/SysCaptchaDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/dao/SysConfigDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/dao/SysLogDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/dao/SysMenuDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/dao/SysRoleDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/dao/SysRoleMenuDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/dao/SysUserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/dao/SysUserRoleDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/dao/SysUserTokenDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/entity/SysCaptchaEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/entity/SysConfigEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/entity/SysLogEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/entity/SysMenuEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/entity/SysRoleEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/entity/SysRoleMenuEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/entity/SysUserEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/entity/SysUserRoleEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/entity/SysUserTokenEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/form/PasswordForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/form/SysLoginForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/oauth2/OAuth2Filter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/oauth2/OAuth2Realm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/oauth2/OAuth2Token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/oauth2/TokenGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/redis/SysConfigRedis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/ShiroService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/SysCaptchaService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/SysConfigService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/SysLogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/SysMenuService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/SysRoleMenuService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/SysRoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/SysUserRoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/SysUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/SysUserTokenService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/impl/ShiroServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/impl/SysCaptchaServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/impl/SysConfigServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/impl/SysLogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/impl/SysMenuServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/impl/SysRoleMenuServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/impl/SysRoleServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/impl/SysUserRoleServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/impl/SysUserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/classes/io/renren/modules/sys/service/impl/SysUserTokenServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/test-classes/io/renren/DynamicDataSourceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/test-classes/io/renren/JwtTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/test-classes/io/renren/RedisTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-fast/target/test-classes/io/renren/service/DynamicDataSourceTestService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/RenrenGeneratorApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/adaptor/MongoTableInfoAdaptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/config/DbConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/config/MongoCondition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/config/MongoConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/config/MongoManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/config/MongoNullCondition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/controller/SysGeneratorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/dao/GeneratorDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/dao/MongoDBGeneratorDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/dao/MySQLGeneratorDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/dao/OracleGeneratorDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/dao/PostgreSQLGeneratorDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/dao/SQLServerGeneratorDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/entity/ColumnEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/entity/TableEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/entity/mongo/MongoDefinition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/entity/mongo/MongoGeneratorEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/entity/mongo/Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/factory/MongoDBCollectionFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/service/SysGeneratorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/utils/Constant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/utils/DateUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/utils/GenUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/utils/MongoScanner$ForkJoinGetProcessName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/utils/MongoScanner$ForkJoinProcessType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/utils/MongoScanner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/utils/PageUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/utils/Query.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/utils/R.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/utils/RRException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/classes/io/renren/utils/RRExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/renren-generator/target/test-classes/io/renren/RenrenApplicationTests.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="mall" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\apache-maven-3.6.3-bin\apache-maven-3.6.3\localRepository" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.3-bin/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.3-bin\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1vDguPRAg1N7YALtWi5ygfHlBFX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="P:\springcloud\springcloudproject\code\mall\mall-product\src\main\java\top\gumt\mall\product\vo" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="top.gumt.mall.product" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="top.gumt.common.valid" />
+      <recent name="top.gumt.common.exception" />
+      <recent name="top.gumt.mall.common.utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="P:\springcloud\springcloudproject\code\mall\mall-product\src\main\java\top\gumt\mall\product\controller" />
+      <recent name="P:\springcloud\springcloudproject\code\mall\mall-common\src\main\java\top\gumt\mall\common\xss" />
+      <recent name="P:\springcloud\springcloudproject\code\mall\mall-common\src\main\java\top\gumt\mall\common\utils" />
+      <recent name="P:\springcloud\springcloudproject\code\mall" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+        <option value="JarApplication" />
+        <option value="MavenRunConfiguration" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.MallSearchApplicationTests.contextLoads">
+    <configuration name="Unnamed" type="CompoundRunConfigurationType">
+      <toRun name="MallProductApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="MallCouponApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="MallThirdPartyApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="MallMemberApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="MallGatewayApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="RenrenApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="MallWareApplication" type="SpringBootApplicationConfigurationType" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType">
+      <toRun name="MallProductApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="MallCouponApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="MallThirdPartyApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="MallMemberApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="MallGatewayApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="RenrenApplication" type="SpringBootApplicationConfigurationType" />
+      <toRun name="MallWareApplication" type="SpringBootApplicationConfigurationType" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MallProductApplicationTests.categoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mall-product" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.gumt.mall.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.gumt.mall.product" />
+      <option name="MAIN_CLASS_NAME" value="top.gumt.mall.product.MallProductApplicationTests" />
+      <option name="METHOD_NAME" value="categoryTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallProductApplicationTests.relationBrandsList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mall-product" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.gumt.mall.product.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.gumt.mall.product" />
+      <option name="MAIN_CLASS_NAME" value="top.gumt.mall.product.MallProductApplicationTests" />
+      <option name="METHOD_NAME" value="relationBrandsList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallSearchApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mall-search" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.gumt.mall.search.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.gumt.mall.search" />
+      <option name="MAIN_CLASS_NAME" value="top.gumt.mall.search.MallSearchApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallThirdPartyApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mall-third-party" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="top.gumt.mall.thirdparty.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="top.gumt.mall.thirdparty" />
+      <option name="MAIN_CLASS_NAME" value="top.gumt.mall.thirdparty.MallThirdPartyApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallCommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mall-common" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="top.gumt.mall.common.MallCommonApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx100m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallCouponApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mall-coupon" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="top.gumt.mall.coupon.MallCouponApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx100m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mall-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="top.gumt.mall.gateway.MallGatewayApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx100m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallMemberApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mall-member" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="top.gumt.mall.member.MallMemberApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx100m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallOrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mall-order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="top.gumt.mall.order.MallOrderApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx100m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mall-product" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="top.gumt.mall.product.MallProductApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx100m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallSearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mall-search" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="top.gumt.mall.search.MallSearchApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallThirdPartyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mall-third-party" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="top.gumt.mall.thirdparty.MallThirdPartyApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx100m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MallWareApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mall-ware" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="top.gumt.mall.ware.MallWareApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx100m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RenrenApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="renren-fast" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.renren.RenrenApplication" />
+      <option name="VM_PARAMETERS" value="-Xmx100m" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RenrenGeneratorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="renren-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.renren.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.renren.RenrenGeneratorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Compound.Unnamed" />
+      <item itemvalue="JUnit.MallThirdPartyApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.MallProductApplicationTests.categoryTest" />
+      <item itemvalue="JUnit.MallProductApplicationTests.relationBrandsList" />
+      <item itemvalue="JUnit.MallSearchApplicationTests.contextLoads" />
+      <item itemvalue="Spring Boot.MallProductApplication" />
+      <item itemvalue="Spring Boot.MallGatewayApplication" />
+      <item itemvalue="Spring Boot.MallThirdPartyApplication" />
+      <item itemvalue="Spring Boot.RenrenApplication" />
+      <item itemvalue="Spring Boot.MallMemberApplication" />
+      <item itemvalue="Spring Boot.MallCommonApplication" />
+      <item itemvalue="Spring Boot.MallCouponApplication" />
+      <item itemvalue="Spring Boot.MallOrderApplication" />
+      <item itemvalue="Spring Boot.MallWareApplication" />
+      <item itemvalue="Spring Boot.MallSearchApplication" />
+      <item itemvalue="Spring Boot.RenrenGeneratorApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MallSearchApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.MallProductApplicationTests.relationBrandsList" />
+        <item itemvalue="JUnit.MallProductApplicationTests.categoryTest" />
+        <item itemvalue="Spring Boot.RenrenGeneratorApplication" />
+        <item itemvalue="JUnit.MallThirdPartyApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.19534633" />
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+          <option name="groupByContributor" value="true" />
+        </serviceView>
+        <serviceView>
+          <option name="contentProportion" value="0.19209957" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+          <option name="groupByContributor" value="true" />
+          <option name="isSelected" value="true" />
+          <option name="viewType" value="group" />
+          <option name="roots">
+            <list>
+              <ServiceState>
+                <option name="path">
+                  <list>
+                    <option value="Run Dashboard" />
+                    <option value="SpringBootApplicationConfigurationType" />
+                  </list>
+                </option>
+                <option name="contributor" value="com.intellij.execution.dashboard.RunDashboardServiceViewContributor" />
+              </ServiceState>
+            </list>
+          </option>
+        </serviceView>
+        <serviceView>
+          <option name="contentProportion" value="0.23106061" />
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+          <option name="groupByContributor" value="true" />
+          <option name="viewType" value="contributor" />
+          <option name="roots">
+            <list>
+              <ServiceState>
+                <option name="contributor" value="com.intellij.docker.view.DockerServiceViewContributor" />
+              </ServiceState>
+            </list>
+          </option>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="114b936e-e75d-4450-9468-6c1ff5208252" name="Default Changelist" comment="" />
+      <created>1626102295953</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626102295953</updated>
+      <workItem from="1626102299508" duration="2723000" />
+      <workItem from="1626105094446" duration="18165000" />
+      <workItem from="1626349015268" duration="29459000" />
+      <workItem from="1626712899680" duration="3240000" />
+      <workItem from="1626782358562" duration="9861000" />
+      <workItem from="1626964783248" duration="24500000" />
+      <workItem from="1627205103993" duration="210291000" />
+      <workItem from="1629723164498" duration="1019000" />
+      <workItem from="1630718569848" duration="3242000" />
+      <workItem from="1630724358484" duration="1980000" />
+      <workItem from="1630762420554" duration="4177000" />
+      <workItem from="1631020329634" duration="1786000" />
+    </task>
+    <task id="LOCAL-00001" summary="项目初始化">
+      <created>1626105429749</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1626105429749</updated>
+    </task>
+    <task id="LOCAL-00002" summary="项目各个模块搭建完成">
+      <created>1626358760893</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1626358760893</updated>
+    </task>
+    <task id="LOCAL-00003" summary="SpringCloud Alibaba">
+      <created>1626736854097</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1626736854097</updated>
+    </task>
+    <task id="LOCAL-00004" summary="SpringCloud Alibaba finish">
+      <created>1626969554918</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1626969554918</updated>
+    </task>
+    <task id="LOCAL-00005" summary="mall-product start">
+      <created>1627221333045</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1627221333045</updated>
+    </task>
+    <task id="LOCAL-00006" summary="mall-product end">
+      <created>1629559299701</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1629559299701</updated>
+    </task>
+    <task id="LOCAL-00007" summary="mall-product end">
+      <created>1629559849477</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1629559849477</updated>
+    </task>
+    <task id="LOCAL-00008" summary="mall-search-start">
+      <created>1630721526860</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1630721526860</updated>
+    </task>
+    <task id="LOCAL-00009" summary="mall-search-start push">
+      <created>1630722218642</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1630722218642</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="项目初始化" />
+    <MESSAGE value="项目各个模块搭建完成" />
+    <MESSAGE value="SpringCloud Alibaba" />
+    <MESSAGE value="SpringCloud Alibaba finish" />
+    <MESSAGE value="mall-product start" />
+    <MESSAGE value="mall-product end" />
+    <MESSAGE value="mall-search-start" />
+    <MESSAGE value="mall-search-start push" />
+    <option name="LAST_COMMIT_MESSAGE" value="mall-search-start push" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="181" key="#New_Docker_Connection" timestamp="1626188269787">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="181" key="#New_Docker_Connection/0.0.1920.1040@0.0.1920.1040" timestamp="1626188269787" />
+    <state x="552" y="181" key="#Project_Structure" timestamp="1628092381349">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="181" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1628092381349" />
+    <state x="402" y="104" width="1165" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1629477436550">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="402" y="104" width="1165" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1629477436550" />
+    <state x="856" y="215" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1629442530191">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="856" y="215" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1629442530191" />
+    <state x="743" y="434" key="#com.intellij.ide.util.MemberChooser" timestamp="1629558250556">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="743" y="434" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1629558250556" />
+    <state x="811" y="412" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1626183298266">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="811" y="412" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626183298265" />
+    <state x="503" y="448" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1628328686904">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="503" y="448" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1628328686904" />
+    <state x="740" y="386" width="440" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1627303691547">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="386" width="440" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1627303691547" />
+    <state x="804" y="365" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1628328200258">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="804" y="365" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1628328200258" />
+    <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1626283363604">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626283363604" />
+    <state x="520" y="115" key="CommitChangelistDialog2" timestamp="1630722199412">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="520" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1630722199412" />
+    <state width="722" height="466" key="DebuggerActiveHint" timestamp="1629458189308">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="722" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1629458189308" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1630721783612">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630721783612" />
+    <state x="811" y="271" key="EnvironmentVariablesDialog" timestamp="1629442535825">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="811" y="271" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1629442535825" />
+    <state x="489" y="231" width="684" height="548" key="FileChooserDialogImpl" timestamp="1630831046151">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="489" y="231" width="684" height="548" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630831046151" />
+    <state width="1877" height="193" key="GridCell.Tab.0.bottom" timestamp="1630831186834">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="193" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630831186834" />
+    <state width="1877" height="193" key="GridCell.Tab.0.center" timestamp="1630831186834">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="193" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630831186834" />
+    <state width="1877" height="193" key="GridCell.Tab.0.left" timestamp="1630831186834">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="193" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630831186834" />
+    <state width="1877" height="193" key="GridCell.Tab.0.right" timestamp="1630831186834">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="193" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630831186834" />
+    <state width="1455" height="252" key="GridCell.Tab.1.bottom" timestamp="1629610212973">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="252" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1629610212973" />
+    <state width="1455" height="252" key="GridCell.Tab.1.center" timestamp="1629610212972">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="252" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1629610212972" />
+    <state width="1455" height="252" key="GridCell.Tab.1.left" timestamp="1629610212972">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="252" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1629610212972" />
+    <state width="1455" height="252" key="GridCell.Tab.1.right" timestamp="1629610212973">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1455" height="252" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1629610212973" />
+    <state width="1554" height="321" key="GridCell.Tab.2.bottom" timestamp="1629460866255">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1554" height="321" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1629460866255" />
+    <state width="1554" height="321" key="GridCell.Tab.2.center" timestamp="1629460866255">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1554" height="321" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1629460866255" />
+    <state width="1554" height="321" key="GridCell.Tab.2.left" timestamp="1629460866255">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1554" height="321" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1629460866255" />
+    <state width="1554" height="321" key="GridCell.Tab.2.right" timestamp="1629460866255">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1554" height="321" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1629460866255" />
+    <state x="600" y="223" key="NewModule_or_Project.wizard" timestamp="1626102705920">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="600" y="223" key="NewModule_or_Project.wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1626102705920" />
+    <state x="426" y="260" key="SettingsEditor" timestamp="1630763220039">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="426" y="260" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1630763220039" />
+    <state x="621" y="268" key="Vcs.Push.Dialog.v2" timestamp="1630722234290">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="621" y="268" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1630722234290" />
+    <state x="655" y="504" key="com.intellij.ide.util.TipDialog" timestamp="1630762426000">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="504" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1630762426000" />
+    <state x="754" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629559184784">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="754" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1629559184784" />
+    <state x="725" y="322" key="git4idea.merge.GitMergeDialog" timestamp="1629559318739">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="725" y="322" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1629559318739" />
+    <state x="690" y="322" key="git4idea.merge.GitPullDialog" timestamp="1629559522445">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="322" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1629559522445" />
+    <state x="258" y="267" key="new project wizard" timestamp="1631108355451">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="258" y="267" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1631108355451" />
+    <state x="685" y="286" key="refactoring.ChangeSignatureDialog" timestamp="1629120155342">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="685" y="286" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1629120155342" />
+    <state x="810" y="606" width="672" height="678" key="search.everywhere.popup" timestamp="1629550448776">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="810" y="606" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1629550448776" />
+  </component>
+</project>
