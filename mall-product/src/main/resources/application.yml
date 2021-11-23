@@ -12,6 +12,9 @@ spring:
         server-addr: 127.0.0.1:8848
   gson:
     date-format: yyyy-MM-dd HH:mm:ss
+  thymeleaf:
+    cache: false
+
 # MapperScan
 # sql映射文件位置
 mybatis-plus:

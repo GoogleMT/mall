@@ -1,20 +1,17 @@
 package top.gumt.mall.ware.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import top.gumt.mall.ware.entity.WareSkuEntity;
 import top.gumt.mall.ware.service.WareSkuService;
 import top.gumt.common.utils.PageUtils;
 import top.gumt.common.utils.R;
-
+import top.gumt.mall.ware.vo.SkuHasStockVO;
 
 
 /**
@@ -29,6 +26,14 @@ import top.gumt.common.utils.R;
 public class WareSkuController {
     @Autowired
     private WareSkuService wareSkuService;
+
+    @PostMapping("/hasstock")
+    public R getSkusHasStock(@RequestBody List<Long> skuIds) {
+        // sku_id,
+        List<SkuHasStockVO> vos = wareSkuService.getSkusHasStock(skuIds);
+        //
+        return R.ok().setData(vos);
+    }
 
     /**
      * 列表

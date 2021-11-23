@@ -23,4 +23,5 @@ class MallThirdPartyApplicationTests {
         ossClient.shutdown();
     }
 
+
 }

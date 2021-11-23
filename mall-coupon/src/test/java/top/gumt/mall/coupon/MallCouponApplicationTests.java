@@ -16,4 +16,6 @@ class MallCouponApplicationTests {
         System.out.println(count);
     }
 
+
+
 }

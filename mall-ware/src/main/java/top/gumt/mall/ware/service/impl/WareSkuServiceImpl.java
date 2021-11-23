@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -17,6 +19,7 @@ import top.gumt.mall.ware.dao.WareSkuDao;
 import top.gumt.mall.ware.entity.WareSkuEntity;
 import top.gumt.mall.ware.feign.ProductFeignService;
 import top.gumt.mall.ware.service.WareSkuService;
+import top.gumt.mall.ware.vo.SkuHasStockVO;
 
 
 @Service("wareSkuService")
@@ -78,5 +81,19 @@ public class WareSkuServiceImpl extends ServiceImpl<WareSkuDao, WareSkuEntity> i
             //插入
             wareSkuDao.addStock(skuId,wareId,skuNum);
         }
+    }
+
+    @Override
+    public List<SkuHasStockVO> getSkusHasStock(List<Long> skuIds) {
+        List<SkuHasStockVO> collect = skuIds.stream().map(skuId -> {
+            SkuHasStockVO hasStockVO = new SkuHasStockVO();
+            // 查询当前sku的库存量
+            // SELECT SUM(stock - stock_locked) FROM wms_ware_sku WHERE sku_id = 3
+            Long count = baseMapper.getSkuStock(skuId);
+            hasStockVO.setHasStock(count == null ? false : count > 0);
+            hasStockVO.setSkuId(skuId);
+            return hasStockVO;
+        }).collect(Collectors.toList());
+        return collect;
     }
 }

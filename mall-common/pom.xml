@@ -87,6 +87,11 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba.nacos</groupId>
+            <artifactId>nacos-client</artifactId>
+            <version>1.2.0</version>
+        </dependency>
 <!--        &lt;!&ndash; 若bootstrap配置不生效，加入以下依赖 &ndash;&gt;-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
