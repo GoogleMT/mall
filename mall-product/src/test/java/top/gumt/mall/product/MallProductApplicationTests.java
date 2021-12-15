@@ -1,19 +1,25 @@
 package top.gumt.mall.product;
 
+import com.alibaba.fastjson.JSON;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
 import lombok.extern.slf4j.Slf4j;
 import net.bytebuddy.asm.Advice;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.test.context.junit4.SpringRunner;
 import top.gumt.mall.product.entity.BrandEntity;
 import top.gumt.mall.product.service.BrandService;
 import top.gumt.mall.product.service.CategoryBrandRelationService;
 import top.gumt.mall.product.service.CategoryService;
+import top.gumt.mall.product.service.SkuInfoService;
 import top.gumt.mall.product.vo.BrandVo;
+import top.gumt.mall.product.vo.SkuItemVo;
 
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
@@ -21,6 +27,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @RunWith(SpringRunner.class)
@@ -34,7 +41,13 @@ class MallProductApplicationTests {
     CategoryService categoryService;
 
     @Autowired
+    private SkuInfoService skuInfoService;
+
+    @Autowired
     private CategoryBrandRelationService categoryBrandRelationService;
+
+    @Autowired
+    StringRedisTemplate stringRedisTemplate;
 
     @Test
     void categoryTest() {
@@ -86,6 +99,30 @@ class MallProductApplicationTests {
             return brandVo;
         }).collect(Collectors.toList());
         System.out.println(vos);
+    }
+
+    @Test
+    void redisTest() {
+        ValueOperations<String, String> ops = stringRedisTemplate.opsForValue();
+        ops.set("hello", "world"+ UUID.randomUUID().toString());
+
+        String hello = ops.get("hello");
+        System.out.println(hello);
+
+    }
+
+    @Autowired
+    RedissonClient redissonClient;
+
+    @Test
+    void testRedis () {
+        System.out.println(redissonClient);
+    }
+
+    @Test
+    void skuInfoTest() {
+        SkuItemVo itemVo = skuInfoService.item(58L);
+        System.out.println(JSON.toJSONString(itemVo));
     }
 
 }

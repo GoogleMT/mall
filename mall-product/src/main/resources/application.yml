@@ -14,6 +14,12 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
   thymeleaf:
     cache: false
+  redis:
+    host: 192.168.56.10
+    port: 6379
+  cache:
+    # 指定缓存类型为redis
+    type: redis
 
 # MapperScan
 # sql映射文件位置
@@ -30,3 +36,10 @@ server:
 logging:
   level:
     top.gumt.mall.*: debug
+
+ipAddr: 192.168.56.10
+mall:
+  thread:
+    core-size: 20
+    max-size: 200
+    keep-alive-time: 10

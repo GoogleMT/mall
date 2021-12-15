@@ -89,6 +89,7 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
         BeanUtils.copyProperties(spuSaveVo, spuInfoEntity);
         spuInfoEntity.setCreateTime(new Date());
         spuInfoEntity.setUpdateTime(new Date());
+        spuInfoEntity.setPublishStatus(0);
         this.saveBaseSpuInfo(spuInfoEntity);
 
         // 2. 保存Spu的描述图片 pms_spu_info_desc
@@ -237,10 +238,6 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
 
     @Override
     public void up(Long spuId) {
-        ArrayList<SkuEsModel> uoProducts = new ArrayList<>();
-
-        // 组装需要的数据
-        SkuEsModel skuEsModel = new SkuEsModel();
         // 查出当前spuid对应的所有sku信息，品牌的名字
         List<SkuInfoEntity> skus = skuInfoService.getSkusBySpuId(spuId);
         List<Long> skuIdList = skus.stream().map(SkuInfoEntity::getSkuId).collect(Collectors.toList());
@@ -301,7 +298,7 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
             return esModel;
         }).collect(Collectors.toList());
         // TODO 5. 发给 es 进行保存 mall-search
-        R r = searchFeignService.productStatusUp(uoProducts);
+        R r = searchFeignService.productStatusUp(collect);
 
         if(r.getCode() == 0) {
             // 远程调用成功

@@ -12,6 +12,32 @@
         <result property="attrValue" column="attr_value"/>
         <result property="attrSort" column="attr_sort"/>
     </resultMap>
+    
+    <resultMap id="SkuItemSaleAttrVo" type="top.gumt.mall.product.vo.SkuItemSaleAttrVo">
+        <result column="attr_id" property="attrId"/>
+        <result column="attr_name" property="attrName"/>
+        <collection property="attrValues" ofType="top.gumt.mall.product.vo.AttrValueWithSkuIdVo">
+            <result column="attr_value" property="attrValue" />
+            <result column="sku_ids" property="skuIds" />
+        </collection>
+    </resultMap>
+    
+    <select id="getSaleAttrsBySpuId" resultMap="SkuItemSaleAttrVo">
+        SELECT
+            pssav.attr_id,
+            pssav.attr_name,
+            pssav.attr_value,
+        GROUP_CONCAT(DISTINCT pki.sku_id) sku_ids
+        FROM
+            pms_sku_info pki
+        LEFT JOIN pms_sku_sale_attr_value pssav ON pki.sku_id = pssav.sku_id
+        WHERE
+            pki.spu_id = #{spuId}
+        GROUP BY
+            pssav.attr_id,
+            pssav.attr_name,
+            pssav.attr_value
+    </select>
 
 
 </mapper>

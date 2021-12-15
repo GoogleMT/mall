@@ -21,6 +21,7 @@ import top.gumt.mall.product.entity.AttrGroupEntity;
 import top.gumt.mall.product.service.AttrGroupService;
 import top.gumt.mall.product.service.AttrService;
 import top.gumt.mall.product.vo.AttrGroupWithAttrsVo;
+import top.gumt.mall.product.vo.SpuItemAttrGroupVo;
 
 
 @Service("attrGroupService")
@@ -78,5 +79,11 @@ public class AttrGroupServiceImpl extends ServiceImpl<AttrGroupDao, AttrGroupEnt
 
 
         return attrGroupWithAttrVos;
+    }
+
+    @Override
+    public List<SpuItemAttrGroupVo> getAttrGroupWithAttrsBySpuId(Long spuId, Long catalogId) {
+        // 1.查询出当前SPU对应的所有属性的分组信息，以及当前分组下的所有属性对应的值
+        return this.baseMapper.getAttrGroupWithAttrsBySpuId(spuId,catalogId);
     }
 }

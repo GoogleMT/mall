@@ -1,15 +1,12 @@
 package top.gumt.mall.product.app;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import top.gumt.common.valid.AddGroup;
 import top.gumt.common.valid.UpdateGroup;
@@ -45,15 +42,22 @@ public class BrandController {
     }
 
 
+
     /**
      * 信息
      */
     @RequestMapping("/info/{brandId}")
-    //@RequiresPermissions("product:brand:info")
+    // @RequiresPermissions("product:brand:info")
     public R info(@PathVariable("brandId") Long brandId){
 		BrandEntity brand = brandService.getById(brandId);
 
         return R.ok().put("brand", brand);
+    }
+    
+    @GetMapping("/infos")
+    public R infos(@RequestParam("brandIds") List<Long> barndId) {
+        List<BrandEntity> brands = brandService.getBrandsByIds(barndId);
+        return R.ok().put("brand", brands);
     }
 
     /**
