@@ -6,13 +6,19 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
     alicloud:
-      access-key: accessKeyId
-      secret-key: accessKeySecret
+      access-key: LTAI5t7ueQP6Q6mymfTRhsjr
+      secret-key: 7oBZixOE5XbM4kidXdhbxrS50Kruxx
       oss:
         endpoint: oss-cn-zhangjiakou.aliyuncs.com
         bucket: gumt-mall
+      sms:
+        endpoint: dysmsapi.aliyuncs.com
+        access-key: LTAI5t7ueQP6Q6mymfTRhsjr
+        secret-key: 7oBZixOE5XbM4kidXdhbxrS50Kruxx
+
 logging:
   level:
     top.gumt.mall.product: debug
 server:
   port: 30000
+

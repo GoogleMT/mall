@@ -54,8 +54,13 @@
 					</ol> </li>
 			</ul>
 			<ul class="header_ul_right">
-				<li style="border: 0;"><a href="./static/item/登录页面\index.html" class="aa">你好，请登录</a></li>
-				<li><a href="./static/item/注册页面\index.html" style="color: red;">免费注册</a> |</li>
+				<li>
+					<a th:if="${session.loginUser != null}">欢迎：[[${session.loginUser == null ? '' : session.loginUser.username}]]</a>
+					<a th:if="${session.loginUser == null}" href="http://auth.mall.com/login.html">你好，请登录</a>
+				</li>
+				<li>
+					<a th:if="${session.loginUser == null}" href="http://auth.mall.com/reg.html" class="li_2">免费注册</a> |
+				</li>
 				<li><a href="javascript:;" class="aa">我的订单</a> |</li>
 			</ul>
 		</div>
