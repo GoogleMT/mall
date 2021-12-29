@@ -1,6 +1,7 @@
 package top.gumt.mall.product.app;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,14 @@ import top.gumt.common.utils.R;
 public class SkuSaleAttrValueController {
     @Autowired
     private SkuSaleAttrValueService skuSaleAttrValueService;
+
+    /**
+     * 列表
+     */
+    @RequestMapping("/getSkuSaleAttrValuesAsString")
+    public List<String> getSkuSaleAttrValuesAsString(@RequestBody Long skuId) {
+        return skuSaleAttrValueService.getSkuSaleAttrValuesAsString(skuId);
+    }
 
     /**
      * 列表

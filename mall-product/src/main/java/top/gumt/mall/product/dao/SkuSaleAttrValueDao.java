@@ -23,4 +23,11 @@ public interface SkuSaleAttrValueDao extends BaseMapper<SkuSaleAttrValueEntity> 
      * @return
      */
     List<SkuItemSaleAttrVo> getSaleAttrsBySpuId(Long spuId);
+
+    /**
+     *
+     * @param skuId
+     * @return
+     */
+    List<String> getSkuSaleAttrValuesAsString(Long skuId);
 }

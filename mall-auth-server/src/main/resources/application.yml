@@ -1,5 +1,5 @@
 spring:
-  application:
+  applic·ation:
     name: mall-auth-server
   cloud:
     nacos:

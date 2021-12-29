@@ -39,5 +39,9 @@
             pssav.attr_value
     </select>
 
+    <select id="getSkuSaleAttrValuesAsString" resultType="string">
+        SELECT attr_value FROM pms_sku_sale_attr_value WHERE sku_id=#{skuId}
+    </select>
+
 
 </mapper>
