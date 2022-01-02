@@ -3,11 +3,11 @@ package top.gumt.mall.cart.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.BoundHashOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import top.gumt.common.constant.CartConstant;
 import top.gumt.common.utils.R;
 import top.gumt.mall.cart.feign.ProductFeignService;
@@ -100,7 +100,7 @@ public class CartServiceImpl implements CartService {
         UserInfoTo userInfoTo = CartInterceptor.threadLocal.get();
         //1 用户未登录，直接通过user-key获取临时购物车
         List<CartItemVo> tempCart = getCartByKey(userInfoTo.getUserKey());
-        if (StringUtils.isEmpty(userInfoTo.getUserId().toString())) {
+        if (StringUtils.isEmpty(userInfoTo.getUserId())) {
             List<CartItemVo> cartItemVos = tempCart;
             cartVo.setItems(cartItemVos);
         }else {
@@ -122,6 +122,38 @@ public class CartServiceImpl implements CartService {
         }
 
         return cartVo;
+    }
+
+
+    @Override
+    public void checkCart(Long skuId, Integer isChecked) {
+        BoundHashOperations<String, Object, Object> ops = getCartItemOps();
+        String cartJson = (String) ops.get(skuId.toString());
+        CartItemVo cartItemVo = JSON.parseObject(cartJson, CartItemVo.class);
+        cartItemVo.setCheck(isChecked==1);
+        ops.put(skuId.toString(),JSON.toJSONString(cartItemVo));
+    }
+
+    @Override
+    public void changeItemCount(Long skuId, Integer num) {
+        BoundHashOperations<String, Object, Object> ops = getCartItemOps();
+        String cartJson = (String) ops.get(skuId.toString());
+        CartItemVo cartItemVo = JSON.parseObject(cartJson, CartItemVo.class);
+        cartItemVo.setCount(num);
+        ops.put(skuId.toString(),JSON.toJSONString(cartItemVo));
+    }
+
+    @Override
+    public void deleteItem(Long skuId) {
+        BoundHashOperations<String, Object, Object> ops = getCartItemOps();
+        ops.delete(skuId.toString());
+    }
+
+    @Override
+    public List<CartItemVo> getCheckedItems() {
+        UserInfoTo userInfoTo = CartInterceptor.threadLocal.get();
+        List<CartItemVo> cartByKey = getCartByKey(userInfoTo.getUserId().toString());
+        return cartByKey.stream().filter(CartItemVo::getCheck).collect(Collectors.toList());
     }
 
 

@@ -4,10 +4,34 @@ spring:
     password: root
     url: jdbc:mysql://192.168.56.10:3306/mall_oms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.jdbc.Driver
+  rabbitmq:
+    host: 192.168.56.10
+    port: 5672
+    virtual-host: /
+  application:
+    name: mall-order
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+  redis:
+    host: 192.168.56.10
+    port: 6379
+  session:
+    store-type: redis
 # MapperScan
-# sql”≥…‰Œƒº˛Œª÷√
+# sqlÊò†Â∞ÑÊñá‰ª∂‰ΩçÁΩÆ
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
   global-config:
     db-config:
       id-type: auto
+server:
+  port: 9000
+
+mall:
+  thread:
+    core-size: 20
+    max-size: 200
+    keep-alive-time: 10
+
+

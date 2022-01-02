@@ -45,7 +45,7 @@ public class CartInterceptor implements HandlerInterceptor {
             userInfoTo.setUserKey(uuid);
         }
         threadLocal.set(userInfoTo);
-        return false;
+        return true;
     }
 
     @Override
