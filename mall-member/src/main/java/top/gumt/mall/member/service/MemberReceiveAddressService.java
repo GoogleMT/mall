@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import top.gumt.common.utils.PageUtils;
 import top.gumt.mall.member.entity.MemberReceiveAddressEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,5 +17,12 @@ import java.util.Map;
 public interface MemberReceiveAddressService extends IService<MemberReceiveAddressEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    /**
+     * 通过用户ID 获取用户的收货地址
+     * @param userId
+     * @return
+     */
+    List<MemberReceiveAddressEntity> getAddressByUserId(Long userId);
 }
 

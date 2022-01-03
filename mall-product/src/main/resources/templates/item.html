@@ -169,7 +169,6 @@
 						<li class="box-stock-li">
 							<div class="box-stock-one">
 							</div> </li>
-						<li th:text="${skuInfo?.weight}+' kg'"> 10 kg </li>
 					</ul>
 				</div>
 				<div class="box-attr-3">
@@ -192,9 +191,9 @@
 				</div>
 				<div class="box-btns clear">
 					<div class="box-btns-one">
-						<form id="itemForm" action="http://cart.gmall.com/addCartItem" method="get">
+						<form id="itemForm" action="http://cart.mall.com/addCartItem" method="get">
 							<input type="text" name="num" id="" value="1" />
-							<input type="hidden" name="skuId" th:value="${skuInfo?.id}" />
+							<input type="hidden" name="skuId" th:value="${item.info?.skuId}" />
 							<div class="box-btns-one1">
 								<div>
 									<button type="button" id="jia"> + </button>
@@ -357,8 +356,8 @@
 	<img src="/static/item/img/44.png" />
 	<span>购物车还没有商品，赶紧选购吧！</span>
 </div>
-<script src="/static/item/static/item/js/jquery1.9.js" type="text/javascript" charset="utf-8"></script>
-<script src="/static/item/static/item/js/js.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/item/js/jquery1.9.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/item/js/js.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
         function addToCart(obj){
             var canClick = $(obj).attr("canClick");

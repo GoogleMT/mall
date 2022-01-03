@@ -53,4 +53,10 @@ public interface CartService {
      * @return
      */
     List<CartItemVo> getCheckedItems();
+
+    /**
+     * 获取用户的购物车
+     * @return
+     */
+    List<CartItemVo> getUserCartItems();
 }

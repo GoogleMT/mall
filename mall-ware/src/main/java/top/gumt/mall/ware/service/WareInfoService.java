@@ -3,6 +3,7 @@ package top.gumt.mall.ware.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import top.gumt.common.utils.PageUtils;
 import top.gumt.mall.ware.entity.WareInfoEntity;
+import top.gumt.mall.ware.vo.FareVo;
 
 import java.util.Map;
 
@@ -16,5 +17,7 @@ import java.util.Map;
 public interface WareInfoService extends IService<WareInfoEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    FareVo getFare(Long addrId);
 }
 

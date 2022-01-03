@@ -1,6 +1,7 @@
 package top.gumt.mall.member.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,11 @@ public class MemberReceiveAddressController {
         PageUtils page = memberReceiveAddressService.queryPage(params);
 
         return R.ok().put("page", page);
+    }
+
+    @RequestMapping("/getAddressByUserId")
+    public List<MemberReceiveAddressEntity> getAddressByUserId(@RequestBody Long userId) {
+        return memberReceiveAddressService.getAddressByUserId(userId);
     }
 
 

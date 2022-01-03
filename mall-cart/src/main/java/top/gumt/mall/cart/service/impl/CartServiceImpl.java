@@ -18,6 +18,7 @@ import top.gumt.mall.cart.vo.CartItemVo;
 import top.gumt.mall.cart.vo.CartVo;
 import top.gumt.mall.cart.vo.SkuInfoVo;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -124,7 +125,6 @@ public class CartServiceImpl implements CartService {
         return cartVo;
     }
 
-
     @Override
     public void checkCart(Long skuId, Integer isChecked) {
         BoundHashOperations<String, Object, Object> ops = getCartItemOps();
@@ -156,6 +156,29 @@ public class CartServiceImpl implements CartService {
         return cartByKey.stream().filter(CartItemVo::getCheck).collect(Collectors.toList());
     }
 
+    @Override
+    public List<CartItemVo> getUserCartItems() {
+        UserInfoTo userInfoTo = CartInterceptor.threadLocal.get();
+        if (userInfoTo.getUserId() == null) {
+            return null;
+        } else {
+            String cartKey = CartConstant.CART_PREFIX + userInfoTo.getUserId();
+            List<CartItemVo> cartItemVos = getCartByKey(cartKey);
+            //
+            List<CartItemVo> collect = cartItemVos.stream()
+                    .filter(item -> item.getCheck())
+                    .map(item -> {
+                        R respData = productFeignService.getPrice(item.getSkuId());
+                        String priceStr = (String) respData.get("data");
+                        BigDecimal price = new BigDecimal(priceStr);
+                        // 更新最新的价格
+                        item.setPrice(price);
+                        return item;
+                    })
+                    .collect(Collectors.toList());
+            return collect;
+        }
+    }
 
     private List<CartItemVo> getCartByKey(String userKey) {
         BoundHashOperations<String, Object, Object> ops = redisTemplate.boundHashOps(CartConstant.CART_PREFIX+userKey);

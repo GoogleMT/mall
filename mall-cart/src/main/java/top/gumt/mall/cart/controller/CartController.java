@@ -101,6 +101,12 @@ public class CartController {
         return "redirect:http://cart.gulimall.com/cart.html";
     }
 
+    @GetMapping("/currentUserCartItems")
+    public List<CartItemVo> getCurrentUserCartItems() {
+        return  cartService.getUserCartItems();
+    }
+
+
     @ResponseBody
     @RequestMapping("/getCheckedItems")
     public List<CartItemVo> getCheckedItems() {

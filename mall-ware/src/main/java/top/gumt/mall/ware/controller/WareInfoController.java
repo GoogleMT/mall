@@ -14,7 +14,7 @@ import top.gumt.mall.ware.entity.WareInfoEntity;
 import top.gumt.mall.ware.service.WareInfoService;
 import top.gumt.common.utils.PageUtils;
 import top.gumt.common.utils.R;
-
+import top.gumt.mall.ware.vo.FareVo;
 
 
 /**
@@ -29,6 +29,11 @@ import top.gumt.common.utils.R;
 public class WareInfoController {
     @Autowired
     private WareInfoService wareInfoService;
+
+    @RequestMapping("/fare/{addrId}")
+    public FareVo getFare(@PathVariable("addrId") Long addrId) {
+        return wareInfoService.getFare(addrId);
+    }
 
     /**
      * 列表

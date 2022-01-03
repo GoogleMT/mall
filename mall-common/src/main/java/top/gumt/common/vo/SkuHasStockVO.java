@@ -1,4 +1,4 @@
-package top.gumt.common.to;
+package top.gumt.common.vo;
 
 import lombok.Data;
 
