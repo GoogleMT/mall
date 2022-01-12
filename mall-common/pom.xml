@@ -92,7 +92,10 @@
             <artifactId>nacos-client</artifactId>
             <version>1.2.0</version>
         </dependency>
-<!--        &lt;!&ndash; 若bootstrap配置不生效，加入以下依赖 &ndash;&gt;-->
+
+
+
+        <!--        &lt;!&ndash; 若bootstrap配置不生效，加入以下依赖 &ndash;&gt;-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>

@@ -30,7 +30,6 @@
         <module>mall-gateway</module>
 
         <module>mall-search</module>
-        <module>mall-auth-server</module>
         <module>mall-cart</module>
 
         <module>mall-test-sso-server</module>

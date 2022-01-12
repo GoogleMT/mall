@@ -8,6 +8,17 @@ spring:
     host: 192.168.56.10
     port: 5672
     virtual-host: /
+#    publisher-returns: true
+#    template:
+#      只要抵达队列，以异步发送优先回调这个returnconfirm
+#      mandatory: true
+    listener:
+      simple:
+#        手动Ack消息
+        acknowledge-mode: manual
+#         确认消息已发送交换机（Exchange）选择确认类型为交互
+#    publisher-confirm-type: correlated
+
   application:
     name: mall-order
   cloud:

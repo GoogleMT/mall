@@ -4,6 +4,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import top.gumt.common.utils.PageUtils;
 import top.gumt.mall.order.entity.OrderEntity;
 import top.gumt.mall.order.vo.OrderConfirmVo;
+import top.gumt.mall.order.vo.OrderSubmitVo;
+import top.gumt.mall.order.vo.PayVo;
+import top.gumt.mall.order.vo.SubmitOrderResponseVo;
 
 import java.util.Map;
 
@@ -23,5 +26,32 @@ public interface OrderService extends IService<OrderEntity> {
      * @return
      */
     OrderConfirmVo confirmOrder();
+
+    /**
+     * 下单操作
+     * @param submitVo
+     * @return
+     */
+    SubmitOrderResponseVo submitOrder(OrderSubmitVo submitVo);
+
+    /**
+     * 根据订单号获取订单信息
+     * @param orderSn
+     * @return
+     */
+    OrderEntity getOrderByOrderSn(String orderSn);
+
+    /**
+     * 关闭 订单
+     * @param orderEntity
+     */
+    void closeOrder(OrderEntity orderEntity);
+
+    /**
+     *
+     * @param orderSn
+     * @return
+     */
+    PayVo getOrderPay(String orderSn);
 }
 

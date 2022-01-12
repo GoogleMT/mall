@@ -1,6 +1,8 @@
 package top.gumt.mall.ware.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import top.gumt.common.mq.OrderTo;
+import top.gumt.common.mq.StockLockedTo;
 import top.gumt.common.utils.PageUtils;
 import top.gumt.mall.ware.entity.WareSkuEntity;
 import top.gumt.mall.ware.vo.SkuHasStockVO;
@@ -31,6 +33,19 @@ public interface WareSkuService extends IService<WareSkuEntity> {
 
     List<SkuHasStockVO> getSkuHasStocks(List<Long> ids);
 
+    /**
+     * 锁
+     * @param lockVo
+     * @return
+     */
     Boolean orderLockStock(WareSkuLockVo lockVo);
+
+    /**
+     * 解锁
+     * @param stockLockedTo
+     */
+    void unlock(StockLockedTo stockLockedTo);
+
+    void unlock(OrderTo orderTo);
 }
 
