@@ -23,6 +23,6 @@ public interface ProductFeignService {
      * @param skuId
      * @return
      */
-    @GetMapping("/${skuId}/price")
+    @GetMapping("/price/{skuId}")
     R getPrice(@PathVariable("skuId") Long skuId);
 }

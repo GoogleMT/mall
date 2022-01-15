@@ -198,7 +198,7 @@ public class CartServiceImpl implements CartService {
         //1判断是否已经登录
         UserInfoTo userInfoTo = CartInterceptor.threadLocal.get();
         //1.1 登录使用userId操作redis
-        if (!StringUtils.isEmpty(userInfoTo.getUserId().toString())) {
+        if (null != userInfoTo.getUserId() && !StringUtils.isEmpty(userInfoTo.getUserId().toString())) {
             return redisTemplate.boundHashOps(CartConstant.CART_PREFIX + userInfoTo.getUserId());
         } else {
             //1.2 未登录使用user-key操作redis

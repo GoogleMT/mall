@@ -2,7 +2,6 @@ package top.gumt.mall.order.service.impl;
 
 import com.alibaba.fastjson.TypeReference;
 import com.baomidou.mybatisplus.core.toolkit.IdWorker;
-import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.BeanUtils;
@@ -234,6 +233,22 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> impleme
         payVo.setSubject(orderItemEntity.getSkuName());
         payVo.setBody(orderItemEntity.getSkuAttrsVals());
         return payVo;
+    }
+
+    @Override
+    public PageUtils getMemberOrderPage(Map<String, Object> params) {
+        MemberResponseVo memberResponseVo = LoginInterceptor.loginUser.get();
+        QueryWrapper<OrderEntity> queryWrapper = new QueryWrapper<OrderEntity>().eq("member_id", memberResponseVo.getId()).orderByDesc("create_time");
+        IPage<OrderEntity> page = this.page(
+                new Query<OrderEntity>().getPage(params),queryWrapper
+        );
+        List<OrderEntity> entities = page.getRecords().stream().map(order -> {
+            List<OrderItemEntity> orderItemEntities = orderItemService.list(new QueryWrapper<OrderItemEntity>().eq("order_sn", order.getOrderSn()));
+            order.setItems(orderItemEntities);
+            return order;
+        }).collect(Collectors.toList());
+        page.setRecords(entities);
+        return new PageUtils(page);
     }
 
     private void saveOrder(OrderCreateTo orderCreateTo) {

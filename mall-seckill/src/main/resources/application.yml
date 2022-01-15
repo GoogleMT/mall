@@ -1,0 +1,22 @@
+server:
+  port: 15000
+spring:
+  redis:
+    host: 192.168.56.10
+    port: 6379
+  application:
+    name: mall-seckill
+  session:
+    store-type: redis
+  rabbitmq:
+    host: 192.168.56.10
+    port: 5672
+    virtual-host: /
+    listener:
+      simple:
+        acknowledge-mode: manual
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+
+ipAddr: 192.168.56.10

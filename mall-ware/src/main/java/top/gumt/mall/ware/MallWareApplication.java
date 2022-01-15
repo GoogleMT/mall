@@ -1,7 +1,6 @@
 package top.gumt.mall.ware;
 
 
-import com.alibaba.cloud.seata.GlobalTransactionAutoConfiguration;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
@@ -18,7 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = "top.gumt.mall.ware.feign")
 @MapperScan("top.gumt.mall.ware.dao")
-@SpringBootApplication(exclude = {GlobalTransactionAutoConfiguration.class})
+@SpringBootApplication
 public class MallWareApplication {
 
     public static void main(String[] args) {

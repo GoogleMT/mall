@@ -9,11 +9,15 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.BoundHashOperations;
+import org.springframework.data.redis.core.RedisTemplate;
+import top.gumt.common.constant.CartConstant;
 import top.gumt.mall.order.entity.OrderEntity;
 import top.gumt.mall.order.entity.OrderReturnReasonEntity;
 import top.gumt.mall.order.service.OrderService;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @Slf4j
@@ -28,10 +32,22 @@ class MallOrderApplicationTests {
     @Autowired
     RabbitTemplate rabbitTemplate;
 
+    @Autowired
+    RedisTemplate redisTemplate;
+
     @Test
     void contextLoads() {
-        int count = orderService.count();
-        System.out.println(count);
+//        int count = orderService.count();
+//        System.out.println(count);
+        System.out.println(CartConstant.CART_PREFIX+"5");
+        BoundHashOperations<String, Object, Object> ops = redisTemplate.boundHashOps(CartConstant.CART_PREFIX+"5");
+        System.out.println(ops.getKey());
+
+        ops.values().forEach(v -> System.out.println("获取map中的value值" + v));
+
+        BoundHashOperations google = redisTemplate.boundHashOps("mall:cart:50");
+        List values = google.values();
+        System.out.println(values.size());
     }
 
     @Test

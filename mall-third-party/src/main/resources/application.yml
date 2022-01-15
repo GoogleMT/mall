@@ -20,5 +20,5 @@ logging:
   level:
     top.gumt.mall.product: debug
 server:
-  port: 30000
+  port: 40000
 

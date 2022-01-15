@@ -27,7 +27,7 @@ public class SkuInfoController {
     @Autowired
     private SkuInfoService skuInfoService;
 
-    @GetMapping("/${skuId}/price")
+    @RequestMapping("/price/{skuId}")
     public R getPrice(@PathVariable("skuId") Long skuId) {
         SkuInfoEntity infoEntity = skuInfoService.getById(skuId);
         return R.ok().setData(infoEntity.getPrice());
