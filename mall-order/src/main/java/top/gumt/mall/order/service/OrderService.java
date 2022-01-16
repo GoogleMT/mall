@@ -2,11 +2,9 @@ package top.gumt.mall.order.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import top.gumt.common.utils.PageUtils;
+import top.gumt.common.vo.SeckillOrderTo;
 import top.gumt.mall.order.entity.OrderEntity;
-import top.gumt.mall.order.vo.OrderConfirmVo;
-import top.gumt.mall.order.vo.OrderSubmitVo;
-import top.gumt.mall.order.vo.PayVo;
-import top.gumt.mall.order.vo.SubmitOrderResponseVo;
+import top.gumt.mall.order.vo.*;
 
 import java.util.Map;
 
@@ -60,5 +58,9 @@ public interface OrderService extends IService<OrderEntity> {
      * @return
      */
     PageUtils getMemberOrderPage(Map<String, Object> params);
+
+    void handlerPayResult(PayAsyncVo payAsyncVo);
+
+    void createSeckillOrder(SeckillOrderTo orderTo);
 }
 

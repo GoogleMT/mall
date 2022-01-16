@@ -35,10 +35,13 @@ import top.gumt.common.utils.Query;
 
 import top.gumt.common.utils.R;
 import top.gumt.common.vo.MemberResponseVo;
+import top.gumt.common.vo.SeckillOrderTo;
 import top.gumt.mall.order.constant.OrderConstant;
+import top.gumt.mall.order.constant.PayConstant;
 import top.gumt.mall.order.dao.OrderDao;
 import top.gumt.mall.order.entity.OrderEntity;
 import top.gumt.mall.order.entity.OrderItemEntity;
+import top.gumt.mall.order.entity.PaymentInfoEntity;
 import top.gumt.mall.order.enume.OrderStatusEnum;
 import top.gumt.mall.order.feign.CartFeignService;
 import top.gumt.mall.order.feign.MemberFeignService;
@@ -47,6 +50,7 @@ import top.gumt.mall.order.feign.WareFeignService;
 import top.gumt.mall.order.interceptor.LoginInterceptor;
 import top.gumt.mall.order.service.OrderItemService;
 import top.gumt.mall.order.service.OrderService;
+import top.gumt.mall.order.service.PaymentInfoService;
 import top.gumt.mall.order.to.OrderCreateTo;
 import top.gumt.mall.order.to.SpuInfoTo;
 import top.gumt.mall.order.vo.*;
@@ -74,6 +78,9 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> impleme
     private StringRedisTemplate redisTemplate;
     @Autowired
     private RabbitTemplate rabbitTemplate;
+
+    @Autowired
+    private PaymentInfoService paymentInfoService;
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
@@ -249,6 +256,59 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> impleme
         }).collect(Collectors.toList());
         page.setRecords(entities);
         return new PageUtils(page);
+    }
+
+    @Override
+    public void handlerPayResult(PayAsyncVo payAsyncVo) {
+        //保存交易流水
+        PaymentInfoEntity infoEntity = new PaymentInfoEntity();
+        String orderSn = payAsyncVo.getOut_trade_no();
+        infoEntity.setOrderSn(orderSn);
+        infoEntity.setAlipayTradeNo(payAsyncVo.getTrade_no());
+        infoEntity.setSubject(payAsyncVo.getSubject());
+        String trade_status = payAsyncVo.getTrade_status();
+        infoEntity.setPaymentStatus(trade_status);
+        infoEntity.setCreateTime(new Date());
+        infoEntity.setCallbackTime(payAsyncVo.getNotify_time());
+        paymentInfoService.save(infoEntity);
+
+        //判断交易状态是否成功
+        if (trade_status.equals("TRADE_SUCCESS") || trade_status.equals("TRADE_FINISHED")) {
+            baseMapper.updateOrderStatus(orderSn, OrderStatusEnum.PAYED.getCode(), PayConstant.ALIPAY);
+        }
+    }
+
+    @Transactional
+    @Override
+    public void createSeckillOrder(SeckillOrderTo orderTo) {
+        MemberResponseVo memberResponseVo = LoginInterceptor.loginUser.get();
+        //1. 创建订单
+        OrderEntity orderEntity = new OrderEntity();
+        orderEntity.setOrderSn(orderTo.getOrderSn());
+        orderEntity.setMemberId(orderTo.getMemberId());
+        if (memberResponseVo!=null){
+            orderEntity.setMemberUsername(memberResponseVo.getUsername());
+        }
+        orderEntity.setStatus(OrderStatusEnum.CREATE_NEW.getCode());
+        orderEntity.setCreateTime(new Date());
+        orderEntity.setPayAmount(orderTo.getSeckillPrice().multiply(new BigDecimal(orderTo.getNum())));
+        this.save(orderEntity);
+        //2. 创建订单项
+        R r = productFeignService.info(orderTo.getSkuId());
+        if (r.getCode() == 0) {
+            SeckillSkuInfoVo skuInfo = r.getData("skuInfo", new TypeReference<SeckillSkuInfoVo>() {
+            });
+            OrderItemEntity orderItemEntity = new OrderItemEntity();
+            orderItemEntity.setOrderSn(orderTo.getOrderSn());
+            orderItemEntity.setSpuId(skuInfo.getSpuId());
+            orderItemEntity.setCategoryId(skuInfo.getCatalogId());
+            orderItemEntity.setSkuId(skuInfo.getSkuId());
+            orderItemEntity.setSkuName(skuInfo.getSkuName());
+            orderItemEntity.setSkuPic(skuInfo.getSkuDefaultImg());
+            orderItemEntity.setSkuPrice(skuInfo.getPrice());
+            orderItemEntity.setSkuQuantity(orderTo.getNum());
+            orderItemService.save(orderItemEntity);
+        }
     }
 
     private void saveOrder(OrderCreateTo orderCreateTo) {

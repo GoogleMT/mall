@@ -1,5 +1,6 @@
 package top.gumt.mall.product.service.impl;
 
+import com.alibaba.fastjson.TypeReference;
 import lombok.SneakyThrows;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ThreadPoolExecutor;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -17,11 +19,14 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import top.gumt.common.utils.PageUtils;
 import top.gumt.common.utils.Query;
 
+import top.gumt.common.utils.R;
 import top.gumt.mall.product.dao.SkuInfoDao;
 import top.gumt.mall.product.entity.SkuImagesEntity;
 import top.gumt.mall.product.entity.SkuInfoEntity;
 import top.gumt.mall.product.entity.SpuInfoDescEntity;
+import top.gumt.mall.product.feign.SeckillFeignService;
 import top.gumt.mall.product.service.*;
+import top.gumt.mall.product.vo.SeckillSkuVo;
 import top.gumt.mall.product.vo.SkuItemSaleAttrVo;
 import top.gumt.mall.product.vo.SkuItemVo;
 import top.gumt.mall.product.vo.SpuItemAttrGroupVo;
@@ -41,6 +46,9 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoDao, SkuInfoEntity> i
 
     @Autowired
     private AttrGroupService attrGroupService;
+
+    @Autowired
+    private SeckillFeignService seckillFeignService;
 
     @Autowired
     private ThreadPoolExecutor executor;
@@ -146,8 +154,27 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoDao, SkuInfoEntity> i
             List<SkuImagesEntity> images = imagesService.getImageeBySkuId(skuId);
             skuItemVo.setImages(images);
         }, executor);
+        //6、秒杀商品的优惠信息
+        CompletableFuture<Void> seckFuture = CompletableFuture.runAsync(() -> {
+            R r = seckillFeignService.getSeckillSkuInfo(skuId);
+            if (r.getCode() == 0) {
+                SeckillSkuVo seckillSkuVo = r.getData(new TypeReference<SeckillSkuVo>() {
+                });
+                long current = System.currentTimeMillis();
+                //如果返回结果不为空且活动未过期，设置秒杀信息
+                if (seckillSkuVo != null&&current<seckillSkuVo.getEndTime()) {
+                    skuItemVo.setSeckillSkuVo(seckillSkuVo);
+                }
+            }
+        }, executor);
         // 等待所有任务都完成
-        CompletableFuture.allOf(saleAttrFuture, descAttrFuture, baseAttrFuture, imageFuture).get();
+        try {
+            CompletableFuture.allOf(saleAttrFuture, descAttrFuture, baseAttrFuture, imageFuture, seckFuture).get();
+        }  catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
         return skuItemVo;
     }
 }

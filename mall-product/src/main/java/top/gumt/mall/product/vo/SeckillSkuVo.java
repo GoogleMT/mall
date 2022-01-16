@@ -1,13 +1,11 @@
-package top.gumt.mall.seckill.to;
+package top.gumt.mall.product.vo;
 
 import lombok.Data;
-import top.gumt.mall.seckill.vo.SkuInfoVo;
 
 import java.math.BigDecimal;
 
 @Data
-public class SeckillSkuRedisTo {
-    private Long id;
+public class SeckillSkuVo {
     /**
      * 活动id
      */
@@ -37,17 +35,12 @@ public class SeckillSkuRedisTo {
      */
     private Integer seckillSort;
 
-    private SkuInfoVo skuInfoVo;
-    /**
-     * 当前商品秒杀的开始时间
-     */
+    //当前商品秒杀的开始时间
     private Long startTime;
-    /**
-     * 当前商品秒杀的结束时间
-     */
+
+    //当前商品秒杀的结束时间
     private Long endTime;
-    /**
-     * 当前商品秒杀的随机码
-     */
+
+    //当前商品秒杀的随机码
     private String randomCode;
 }

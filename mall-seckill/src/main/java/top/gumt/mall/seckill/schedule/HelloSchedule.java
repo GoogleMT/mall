@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class HelloSchedule {
 
-    @Scheduled(cron = "0 0 3 * * ?")
-    @Async
+    @Scheduled(cron = "0/5 * * * * ?")
+        @Async
     public void hello() throws InterruptedException {
-        log.info("hello...");
+        log.info("hello world");
     }
 }

@@ -519,6 +519,11 @@
         <div class="swiper-container swiper_section_second_list_left">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
+                    <ul id="seckillSkuContent">
+
+                    </ul>
+                </div>
+                <div class="swiper-slide">
                     <ul>
                         <li>
                             <img src="/static/index/img/section_second_list_img1.jpg" alt="">
@@ -610,6 +615,22 @@
   function search() {
       var keyword=$("#searchText").val()
       window.location.href="http://search.mall.com/list.html?keyword="+keyword;
+  }
+
+  $.get("http://seckill.gulimall.com/getCurrentSeckillSkus", function (res) {
+      if (res.data.length > 0) {
+          res.data.forEach(function (item) {
+              $("<li onclick='toDetail(" + item.skuId + ")'></li>").append($("<img style='width: 130px; height: 130px' src='" + item.skuInfoVo.skuDefaultImg + "' />"))
+                  .append($("<p>"+item.skuInfoVo.skuTitle+"</p>"))
+                  .append($("<span>" + item.seckillPrice + "</span>"))
+                  .append($("<s>" + item.skuInfoVo.price + "</s>"))
+                  .appendTo("#seckillSkuContent");
+          })
+      }
+  })
+
+  function toDetail(skuId) {
+      location.href = "http://item.gulimall.com/" + skuId + ".html";
   }
 
 

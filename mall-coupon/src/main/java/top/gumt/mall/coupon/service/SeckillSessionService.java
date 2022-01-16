@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import top.gumt.common.utils.PageUtils;
 import top.gumt.mall.coupon.entity.SeckillSessionEntity;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,5 +17,11 @@ import java.util.Map;
 public interface SeckillSessionService extends IService<SeckillSessionEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    /**
+     * 获取近3天的秒杀活动
+     * @return
+     */
+    List<SeckillSessionEntity> getSeckillSessionsIn3Days();
 }
 

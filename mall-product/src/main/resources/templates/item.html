@@ -145,10 +145,27 @@
 				</div>
 				<div class="box-summary clear">
 					<ul>
-						<li>惊喜价</li>
-						<li> <span>￥</span> <span th:text="${#numbers.formatDecimal(item.info.price, 3, 2)}">4499.00</span> </li>
-						<li> </li>
-						<li> <a href=""> </a> </li>
+						<li>京东价</li>
+						<li>
+							<span>￥</span>
+							<span th:text="${#numbers.formatDecimal(item.info.price,3,2)}">4499.00</span>
+						</li>
+						<li style="color: red" th:if="${item.seckillSkuVo != null}">
+
+                            <span th:if="${#dates.createNow().getTime() < item.seckillSkuVo.startTime}">
+                                商品将会在[[${#dates.format(new java.util.Date(item.seckillSkuVo.startTime),"yyyy-MM-dd HH:mm:ss")}]]进行秒杀
+                            </span>
+
+							<span th:if="${#dates.createNow().getTime() >= item.seckillSkuVo.startTime && #dates.createNow().getTime() <= item.seckillSkuVo.endTime}">
+                                秒杀价  [[${#numbers.formatDecimal(item.seckillSkuVo.seckillPrice,1,2)}]]
+                            </span>
+
+						</li>
+						<li>
+							<a href="/static/item/">
+								预约说明
+							</a>
+						</li>
 					</ul>
 				</div>
 				<div class="box-wrap clear">

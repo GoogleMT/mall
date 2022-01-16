@@ -70,4 +70,9 @@ spring:
           uri: lb://mall-product
           predicates:
             - Host=mall.com,item.mall.com
+          #将主机地址为seckill.mall.com转发至mall-seckill
+        - id: mall_seckill_host
+          uri: lb://mall-seckill
+          predicates:
+            - Host=seckill.mall.com
 
