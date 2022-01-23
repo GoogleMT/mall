@@ -15,7 +15,9 @@ package top.gumt.common.exception;
 public enum BizCodeEnum {
     UNKNOW_EXEPTION(10000,"系统未知异常"),
     VALID_EXCEPTION( 10001,"参数格式校验失败"),
+    TO_MANY_REQUEST(10002,"请求流量过大，请稍后再试"),
     READ_TIME_OUT_EXCEPTION(10004,"远程调用服务超时，请重新再试"),
+    SECKILL_EXCEPTION(10005,"秒杀请求过多，请重新再试"),
     PRODUCT_UP_EXCEPTION(11000, "商品上架失败"),
     SMS_CODE_EXCEPTION(10003,"验证码获取频率太高，请稍后再试"),
     USER_EXIST_EXCEPTION(15001,"存在相同的用户"),

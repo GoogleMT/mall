@@ -271,7 +271,6 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> impleme
         infoEntity.setCreateTime(new Date());
         infoEntity.setCallbackTime(payAsyncVo.getNotify_time());
         paymentInfoService.save(infoEntity);
-
         //判断交易状态是否成功
         if (trade_status.equals("TRADE_SUCCESS") || trade_status.equals("TRADE_FINISHED")) {
             baseMapper.updateOrderStatus(orderSn, OrderStatusEnum.PAYED.getCode(), PayConstant.ALIPAY);

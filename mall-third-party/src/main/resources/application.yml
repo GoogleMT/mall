@@ -1,16 +1,28 @@
 spring:
+  zipkin:
+    base-url: http://192.168.56.10:9411/
+    discovery-client-enabled: false
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1
   application:
     name: mall-third-party
   cloud:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
     alicloud:
       access-key: LTAI5t7ueQP6Q6mymfTRhsjr
       secret-key: 7oBZixOE5XbM4kidXdhbxrS50Kruxx
       oss:
         endpoint: oss-cn-zhangjiakou.aliyuncs.com
-        bucket: gumt-mall
+        bucket: gumt-mallCartController
       sms:
         endpoint: dysmsapi.aliyuncs.com
         access-key: LTAI5t7ueQP6Q6mymfTRhsjr
@@ -22,3 +34,8 @@ logging:
 server:
   port: 40000
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

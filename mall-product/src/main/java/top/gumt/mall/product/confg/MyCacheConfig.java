@@ -39,7 +39,7 @@ public class MyCacheConfig {
         }
 
         if (redisProperties.getKeyPrefix() != null) {
-            config = config.prefixCacheNameWith(redisProperties.getKeyPrefix());
+            config = config.prefixKeysWith(redisProperties.getKeyPrefix());
         }
         if (!redisProperties.isCacheNullValues()) {
             config = config.disableCachingNullValues();

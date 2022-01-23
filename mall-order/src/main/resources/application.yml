@@ -1,4 +1,12 @@
 spring:
+  zipkin:
+    base-url: http://192.168.56.10:9411/
+    discovery-client-enabled: false
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1
   datasource:
     username: root
     password: root
@@ -23,7 +31,11 @@ spring:
     name: mall-order
   cloud:
     nacos:
-      server-addr: 127.0.0.1:8848
+      server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
   redis:
     host: 192.168.56.10
     port: 6379
@@ -45,4 +57,8 @@ mall:
     max-size: 200
     keep-alive-time: 10
 
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

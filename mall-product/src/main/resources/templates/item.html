@@ -221,8 +221,19 @@
 							</div>
 						</form>
 					</div>
-					<div id="cartBtn" style="cursor:pointer;" canclick="1" onclick="addToCart(this)" class="box-btns-two">
-						放入购物车
+					<div class="box-btns-two"
+						 th:if="${item.seckillSkuVo == null }">
+						<a class="addToCart" href="http://cart.mall.com/addToCart" th:attr="skuId=${item.info.skuId}">
+							加入购物车
+						</a>
+					</div>
+
+					<div class="box-btns-two"
+						 th:if="${item.seckillSkuVo != null && (#dates.createNow().getTime() >= item.seckillSkuVo.startTime && #dates.createNow().getTime() <= item.seckillSkuVo.endTime)}">
+						<a class="seckill" href="#"
+						   th:attr="skuId=${item.info.skuId},sessionId=${item.seckillSkuVo.promotionSessionId},code=${item.seckillSkuVo.randomCode}">
+							立即抢购
+						</a>
 					</div>
 				</div>
 			</div>
@@ -376,46 +387,66 @@
 <script src="/static/item/js/jquery1.9.js" type="text/javascript" charset="utf-8"></script>
 <script src="/static/item/js/js.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-        function addToCart(obj){
-            var canClick = $(obj).attr("canClick");
-            if(canClick=='0'){
-                return ;
-            }
-            $("#itemForm").submit();
-        }
+	function addToCart(obj){
+		var canClick = $(obj).attr("canClick");
+		if(canClick=='0'){
+			return ;
+		}
+		$("#itemForm").submit();
+	}
 
-        function switchSkuId() {
-            // 被选中属性
-            var checkDivs = $(".redborder div");
-            var valueIds="";
-            // 拼接成属性值串
-            for (var i = 0; i < checkDivs.length; i++) {
-                var saleAttrValueDiv = checkDivs.eq(i);
-                if(i>0){
-                    valueIds= valueIds+"|";
-                }
-                valueIds=valueIds+saleAttrValueDiv.attr("value");
-            }
-            //页面上的hashjson
-            var valuesSku = $("#valuesSku").attr("value");
-            var valuesSkuJson=JSON.parse(valuesSku);
+	function switchSkuId() {
+		// 被选中属性
+		var checkDivs = $(".redborder div");
+		var valueIds="";
+		// 拼接成属性值串
+		for (var i = 0; i < checkDivs.length; i++) {
+			var saleAttrValueDiv = checkDivs.eq(i);
+			if(i>0){
+				valueIds= valueIds+"|";
+			}
+			valueIds=valueIds+saleAttrValueDiv.attr("value");
+		}
+		//页面上的hashjson
+		var valuesSku = $("#valuesSku").attr("value");
+		var valuesSkuJson=JSON.parse(valuesSku);
 
-            // 看看hash有没有
-            var skuId= valuesSkuJson[valueIds];
-            // 当前sku
-            var skuIdSelf=$("#skuId").val();
+		// 看看hash有没有
+		var skuId= valuesSkuJson[valueIds];
+		// 当前sku
+		var skuIdSelf=$("#skuId").val();
 
-            // 判断是否跳转
-            if(skuId){
-                if(skuId==skuIdSelf){
-                    $("#cartBtn").attr("class","box-btns-two");
-                }else{
-                    window.location.href="/"+skuId+".html";
-                }
-            }else{
-                $("#cartBtn").attr("class","box-btns-two-off");
-            }
-        }
-	</script>
+		// 判断是否跳转
+		if(skuId){
+			if(skuId==skuIdSelf){
+				$("#cartBtn").attr("class","box-btns-two");
+			}else{
+				window.location.href="/"+skuId+".html";
+			}
+		}else{
+			$("#cartBtn").attr("class","box-btns-two-off");
+		}
+	}
+
+	$(".addToCart").click(function () {
+		let skuId = $(this).attr("skuId");
+		let num = $("#productNum").val();
+		location.href = "http://cart.mall.com/addCartItem?skuId=" + skuId + "&num=" + num;
+		return false;
+	});
+
+	$(".seckill").click(function () {
+		var isLogin = [[${session.loginUser != null}]];     //true
+		if (isLogin) {
+			var killId = $(this).attr("sessionid") + "-" + $(this).attr("skuid");
+			var code = $(this).attr("code");
+			var num = $("#productNum").val();
+			location.href = "http://seckill.mall.com/kill?killId=" + killId + "&key=" + code + "&num=" + num;
+		} else {
+			alert("秒杀请先登录");
+		}
+		return false;
+	});
+</script>
 </body>
 </html>

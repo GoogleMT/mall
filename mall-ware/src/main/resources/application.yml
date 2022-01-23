@@ -1,4 +1,12 @@
 spring:
+  zipkin:
+    base-url: http://192.168.56.10:9411/
+    discovery-client-enabled: false
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1
   datasource:
     username: root
     password: root
@@ -8,6 +16,10 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
   application:
     name: mall-ware
   rabbitmq:
@@ -26,3 +38,8 @@ logging:
   level:
     top.gumt.mall.*: debug
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
